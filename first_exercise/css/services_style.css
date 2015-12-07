@@ -1,6 +1,3 @@
-body {
-  margin: 0;
-}
 
 .contact {
   background: white;
@@ -70,38 +67,6 @@ body {
 .copyright p {
   margin-left: -60px;
 }
-
-.filter-tabs {
-  margin-bottom: 20px;
-}
-
-.filter-tabs ul {
-  border: 1px solid #f2f2f2;
-  border-radius: 5px;
-  float: left;
-  list-style: none;
-  padding: 9px 0;
-}
-
-.filter-tabs li {
-  border-right: 1px solid #f2f2f2;
-  color: #666;
-  display: inline;
-  font-size: 15px;
-  margin-left: 0;
-  padding: 12px 12px;
-}
-.filter-tabs li:hover {
-  background: #1abc9c;
-  border-radius: 2px;
-  color: #f2f2f2;
-  cursor: pointer;
-}
-
-.filter-tabs li:last-child {
-  border-right: 0;
-}
-
 
 footer {
   background: #222;
@@ -217,6 +182,17 @@ header h2 {
   color: #1abc9c;
 }
 
+.master {
+  background: #f2f2f2;
+}
+
+.master .part1 {
+  text-align: center;
+}
+
+.master li{
+  display: inline;
+}
 
 .meta-info {
   color: #999;
@@ -318,7 +294,6 @@ nav li {
   text-transform: uppercase;
 }
 
-
 nav a {
   color: #666;
   font-size: 14px;
@@ -331,31 +306,11 @@ nav a:hover {
   color: #1abc9c;
   text-shadow: 1px 1px 2px #1abc9c;
 }
+
 .placeholder {
   width: 100%;
   height: 30px;
 }
-
-.shuffle {
-  border: 1px solid #888;
-  border-radius: 4px;
-  color: #888;
-  float: right;
-  font-size: 26px;
-  font-family: monospace;
-  font-weight: bold;
-  height: 40px;
-  margin: 0;
-  text-align: center;
-  text-shadow: 0 0 1px #888;
-  width: 40px;
-}
-
-.shuffle:hover {
-  background: #1abc9c;
-  color: white;
-  cursor: pointer;
-  }
 
 .social-media-links {
   text-align: right;
@@ -390,17 +345,17 @@ nav a:hover {
   text-decoration: none;
 }
 
-.tile h3:hover {
-  color: #1abc9c;
-  text-shadow: 0 0 1px #00ff99;
-}
-
-
 .tile h3 {
   color: #666;
   font-family: sans-serif;
-  letter-spacing: 2px;
+  font-size: 18px;
   margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.tile h3:hover {
+  color: #1abc9c;
+  text-shadow: 0 0 1px #00ff99;
 }
 
 .tile ul {
@@ -411,6 +366,7 @@ nav a:hover {
 .tile li {
   color: #888;
   display: inline-block;
+  font-size: 15px;
   margin-left: 0;
 }
 
@@ -423,6 +379,9 @@ nav a:hover {
   content: '';
 }
 
+.tile p {
+  margin: 15px 0;
+}
 .tiles-row {
   float: left;
 }
