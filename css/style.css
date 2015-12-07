@@ -1,6 +1,3 @@
-body {
-  margin: 0;
-}
 
 .contact {
   background: white;
@@ -43,12 +40,14 @@ body {
 .contact-image {
   border-right: 1px solid #d2d2d2;
   box-sizing: content-box;
+  padding-top: 10px;
   text-align: center;
 }
 
 .contact-image img{
   box-shadow: 2px -2px 3px #666;
-  height: 160px;
+  border-radius: 100px;
+  height: 130px;
   width: 130px;
 }
 
@@ -298,7 +297,7 @@ header h2 {
 }
 
 .meta-info-wrap {
-  background: url(../img/map1.png) no-repeat center center;
+  background: url(../img/map.png) no-repeat center center;
   background-size: 100% 100%;
   width: 100%;
 }
@@ -426,6 +425,7 @@ nav a:hover {
 .tiles-row {
   float: left;
 }
+
 .top-placeholder {
   width: 100%;
   height: 60px;
@@ -477,5 +477,4 @@ nav a:hover {
 
 .wrap {
   background: white;
-  margin-bottom: -70px;
 }
