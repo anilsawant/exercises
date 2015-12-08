@@ -288,7 +288,6 @@ header h2 {
   text-shadow: 1px 0 1px #555;
 }
 
-
 .master .part1 p {
   color: #666;
   font-size: 18px;
@@ -412,6 +411,12 @@ header h2 {
   background-size: 100% 100%;
   padding-top: 20px;
   width: 100%;
+}
+
+#my-work-header {
+  color: #1abc9c;
+  margin-left: 12px;
+  text-shadow: 0 0 3px #1abc9c;
 }
 
 /* nav bar styling
@@ -544,8 +549,10 @@ section p {
 .tile h3 {
   color: #666;
   font-family: sans-serif;
+  font-size: 16px;
   letter-spacing: 2px;
   margin-bottom: 0;
+  margin-top: 10px;
 }
 
 .tile h3:hover {
