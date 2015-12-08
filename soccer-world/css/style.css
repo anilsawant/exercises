@@ -1,80 +1,16 @@
-body {
-  margin: 0;
-}
-
-.contact {
-  background: white;
-  box-shadow: 0 -2px 3px #777;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 20px 0;
-}
-
-.contact-details ul{
-  list-style: none;
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-details h1 {
-  color: #555;
-  font-weight: bold;
-  text-shadow: 1px 1px 6px #444;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.contact-details li {
-    padding: 5px;
-}
-/*
-.contact-email {
-  list-style-image: url(../img/email.png);
-}
-*/
-.contact-email a{
-  cursor: alias;
-  text-decoration: none;
-  color: #1abc9c;
-  font-weight: bold;
-}
-
-.contact-image {
-  border-right: 1px solid #d2d2d2;
-  box-sizing: content-box;
-  text-align: center;
-}
-
-.contact-image img{
-  box-shadow: 2px -2px 3px #666;
-  height: 160px;
-  width: 130px;
-}
-
-.contact-wrap {
-  box-shadow: 0 0 9px #666;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.contact-wrap h2 {
-  color: #555;
-  background: #f2f2f2;
-  padding: 8px 0 10px 20px;
-  margin-bottom: 0;
-  text-shadow: 2px 1px 1px black;
-  letter-spacing: 3px;
-}
 
 .copyright p {
   margin-left: -60px;
 }
 
+/* Fiter tabs
+..............................................................................*/
+
 .filter-tabs {
   margin-bottom: 20px;
 }
 
+/* to remove the bullet style*/
 .filter-tabs ul {
   border: 1px solid #f2f2f2;
   border-radius: 5px;
@@ -83,6 +19,7 @@ body {
   padding: 9px 0;
 }
 
+/* to make the list items fall in-line*/
 .filter-tabs li {
   border-right: 1px solid #f2f2f2;
   color: #666;
@@ -91,6 +28,8 @@ body {
   margin-left: 0;
   padding: 12px 12px;
 }
+
+/* changes the background color of the list item when user hovers te mouse over it*/
 .filter-tabs li:hover {
   background: #1abc9c;
   border-radius: 2px;
@@ -98,11 +37,12 @@ body {
   cursor: pointer;
 }
 
+/* removes the border styling from the last list item (last-child)*/
 .filter-tabs li:last-child {
   border-right: 0;
 }
 
-
+/* styling for the footer element*/
 footer {
   background: #222;
   box-shadow: 0 -1px 3px #222;
@@ -113,6 +53,9 @@ footer {
   padding: 40px 0;
   width: 100%;
 }
+
+/* "go to top" box
+..............................................................................*/
 
 .gototop {
   background: #888;
@@ -130,11 +73,14 @@ footer {
   width: 40px;
 }
 
+/* changes the background color of the list item when user hovers te mouse over it*/
 .gototop:hover {
   background: #1abc9c;
   cursor: pointer;
 }
 
+/* styling for the header element
+..............................................................................*/
 header {
   background: white;
   border-bottom: 1px solid #1abc9c;
@@ -142,13 +88,15 @@ header {
   height: 60px;
   min-height: 40px;
   overflow: auto;
-  position: fixed;
+  position: fixed;  /* fixes the position of the header and brings it on top of floating elements*/
   text-align: center;
   top: 0;
   width: 100%;
   z-index: 9999;
 }
 
+/* styling for the header h2 element
+..............................................................................*/
 header h2 {
   border-right: 1px solid #999;
   color: #1abc9c;
@@ -164,48 +112,85 @@ header h2 {
   text-shadow: 2px 0 1px #333;
 }
 
+
+.image-on-left .image {
+  background: url(../img/graph1.png);
+  background-size: cover;
+  margin-top: 40px;
+  height: 340px;
+}
+
+.image-on-right .image {
+  background: url(../img/chart2.png);
+  background-size: 100% 100%;
+  margin-top: 40px;
+  height: 340px;
+}
+
+/*info strip styling
+..............................................................................*/
+.info-strip {
+  background: #1abc9c;
+  color: #f2f2f2;
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+.info-strip p {
+  font-weight: lighter;
+}
+
+.info-strip a {
+  color: #f2f2f2;
+  font-weight: bold;
+}
+
+.info-strip a:hover {
+  color: #1abc9c;
+}
+
 .main-header {
-  background: #f2f2f2;
-  padding: 30px 0;
+  background: #f2f2f2;    /** set background color **/
+  padding: 30px 0;    /** prefix extra space **/
 }
 
 .main-header .part1 h1{
-  letter-spacing: 10px;
-  margin-bottom: 10px;
+  letter-spacing: 10px;   /** increase the gap between individual letters **/
+  margin-bottom: 10px;    /** Extra space at the bottom  **/
 }
 
 .main-header .part1 p{
-  color: #777;
-  font-size: 17px;
-  margin-bottom: 10px;
+  color: #777;    /** set the text color **/
+  font-size: 17px;    /** set the font size **/
+  margin-bottom: 10px;    /** Extra space at the bottom  **/
 }
 
 .main-header .part2 {
-  margin-top: 20px;
+  margin-top: 20px;   /** Extra space at the top  **/
   text-align: right;
 }
 
 .main-header .part2 ul{
   list-style: none;
-  margin-bottom: 0;
-  padding: 10px 0;
+  margin-bottom: 0;   /** Remove any space at the bottom  **/
+  padding: 10px 0;    /** Extra space at the top and bottom  **/
 }
 
 .main-header .part2 li{
   color: #444;
-  margin: 0;
-  padding: 0;
+  margin: 0;    /** Remove any space around the element  **/
+  padding: 0;   /** remove any space around the element inside it's border  **/
   display: inline;
 }
 
 .main-header .part2 li::after{
   content: '/';
-  padding: 0 15px;
+  padding: 0 15px;    /** no space at the top and bottom, Extra space at the left and right  **/
 }
 
 .main-header .part2 li:last-child::after{
   content: '';
-  padding: 0;
+  padding: 0;   /** Remove any space around the element inside its border  **/
 }
 
 .main-header .part2 a {
@@ -217,12 +202,70 @@ header h2 {
   color: #1abc9c;
 }
 
-
-.meta-info {
-  color: #999;
+/* styling for the master(hero) section
+..............................................................................*/
+.master {
+  background: #f2f2f2;
+  padding-bottom: 40px;   /** Extra space at the bottom  **/
 }
 
-.meta-info .part1 {
+.master .part1 {
+  padding-top: 60px;    /** Extra space at the top  **/
+  margin-bottom: 20px;    /** Extra space at the bottom  **/
+  text-align: center;
+}
+
+.master .part1 h1{
+  color: #222;
+  letter-spacing: 4px;
+  text-shadow: 1px 0 1px #555;
+}
+
+
+.master .part1 p {
+  color: #666;
+  font-size: 18px;
+  text-shadow: 1px 0 1px #555;
+}
+
+.master .part2 {
+  background: url(../img/soccer/stadium2.png);
+  background-size: cover;
+  padding: 200px 0;   /** Extra space at the top and bottom, no space at leftt and right  **/
+  text-align: center;
+}
+
+.master .part2 .para h1 {
+  font-size: 40px;
+  text-shadow: 0 2px 1px white;
+}
+
+.master .part2 .para p {
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 0 2px white;
+}
+
+.master .part3 {
+  margin-top: 40px;   /** Extra space at the top  **/
+}
+
+.master .part3 li h4{
+  text-shadow: 1px 0 2px #555;
+}
+
+.master .part3 li p{
+  color: #777;
+}
+
+.master li{
+  display: inline;
+}
+
+/*styling for meta info-strip
+..............................................................................*/
+.meta-info {
+  color: #999;
 }
 
 .meta-info .part1 h3 {
@@ -232,9 +275,8 @@ header h2 {
   text-transform: uppercase;
 }
 
-.meta-info .part2 {
-}
-
+/* styling for part 2 of meta info
+..............................................................................*/
 .meta-info .part2 a {
   color: #999;
   text-decoration: none;
@@ -246,12 +288,12 @@ header h2 {
 }
 
 .meta-info .part2 li {
-  margin-left: 13px;
-  margin-bottom: 10px;
+  margin-left: 13px;    /** Extra space on the left  **/
+  margin-bottom: 10px;    /** Extra space at the bottom  **/
 }
 
 .meta-info .part2 ul {
-  list-style: square;
+  list-style: square;   /** bullets appear as square **/
 }
 
 .meta-info .part3 .row-1 {
@@ -267,13 +309,13 @@ header h2 {
 }
 
 .meta-info .part3 .row-2 {
-  margin-top: 20px;
+  margin-top: 20px;   /** Extra space at the top  **/
 }
 
 .meta-info .part3 .row-2 input{
   border: 0 solid #000;
   margin-left: -3px;
-  padding: 6px;
+  padding: 6px;   /** Extra space around the element **/
 }
 
 .meta-info .part3 .row-2 #txtemail{
@@ -290,19 +332,23 @@ header h2 {
   background: #1abc9c;
   color: white;
   font-weight: bold;
-  padding: 5px;
+  padding: 5px;   /** Extra space around the element  **/
 }
 
 .meta-info .part3 .row-2 #subscribe:hover{
   cursor: pointer;
 }
 
-.meta-info-wrap {
+/* styling for wrapper*/
+#meta-info-wrap {
   background: url(../img/map1.png) no-repeat center center;
   background-size: 100% 100%;
+  padding-top: 20px;
   width: 100%;
 }
 
+/* nav bar styling
+..............................................................................*/
 nav ul {
   margin: 0;
   margin: 19px 0;
@@ -331,11 +377,14 @@ nav a:hover {
   color: #1abc9c;
   text-shadow: 1px 1px 2px #1abc9c;
 }
+
 .placeholder {
   width: 100%;
   height: 30px;
 }
 
+/* box for shuffle icon
+..............................................................................*/
 .shuffle {
   border: 1px solid #888;
   border-radius: 4px;
@@ -357,6 +406,40 @@ nav a:hover {
   cursor: pointer;
   }
 
+/* section styling
+..............................................................................*/
+section {
+  border-bottom: 1px solid #f2f2f2;
+  padding: 60px 0;
+}
+
+/* section styling*/
+section .content a {
+  color: #1abc9c;
+  text-decoration: none;
+  text-shadow: 1px 0 0 #666;
+}
+
+section .content a:hover {
+  color: #333;
+}
+
+section .content h1{
+  color: #666;
+  text-transform: full-width;
+  text-shadow: 1px 0 1px #666;
+}
+
+section article{
+  color: #777;
+  text-align: left;
+}
+
+section p {
+  text-shadow: 1px 0 1px #666;
+}
+
+/* media links styling*/
 .social-media-links {
   text-align: right;
 }
@@ -375,6 +458,7 @@ nav a:hover {
   opacity: 1.0;
 }
 
+/* Tiles styling*/
 .tile {
   float: left;
   margin-bottom: 30px;
@@ -390,17 +474,16 @@ nav a:hover {
   text-decoration: none;
 }
 
-.tile h3:hover {
-  color: #1abc9c;
-  text-shadow: 0 0 1px #00ff99;
-}
-
-
 .tile h3 {
   color: #666;
   font-family: sans-serif;
   letter-spacing: 2px;
   margin-bottom: 0;
+}
+
+.tile h3:hover {
+  color: #1abc9c;
+  text-shadow: 0 0 1px #00ff99;
 }
 
 .tile ul {
@@ -412,6 +495,7 @@ nav a:hover {
   color: #888;
   display: inline-block;
   margin-left: 0;
+  text-shadow: 1px 0 1px #888;
 }
 
 .tile li::after {
@@ -423,18 +507,25 @@ nav a:hover {
   content: '';
 }
 
+.tile p {
+  margin: 15px 0;
+}
+
 .tiles-row {
   float: left;
 }
+
 .top-placeholder {
   width: 100%;
   height: 60px;
 }
 
+/* sets the background color to white*/
 .variation-bar {
   background: #1abc9c;
 }
 
+/* styling for variation bar*/
 .variation-bar .heading {
   color: white;
   font-family: sans-serif;
@@ -454,7 +545,6 @@ nav a:hover {
   font-weight: bold;
   margin-left: 20px;
   text-align: center;
-
 }
 
 .variation-bar ul {
@@ -475,7 +565,7 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* sets the background color to white*/
 .wrap {
   background: white;
-  margin-bottom: -70px;
 }
