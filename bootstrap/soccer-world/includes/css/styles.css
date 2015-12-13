@@ -1,0 +1,327 @@
+/*............................................................................
+                  Fonts used in the website
+..............................................................................*/
+
+@font-face {
+  font-family: clonewars;
+  src: url(../fonts/clonewars2.ttf);
+}
+@font-face {
+  font-family: headliner;
+  src: url(../fonts/Headliner.ttf);
+}
+@font-face {
+  font-family: quango;
+  src: url(../fonts/quango.otf);
+}
+@font-face {
+  font-family: trench;
+  src: url(../fonts/trench.otf);
+}
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+#inputMessage {
+  margin-bottom: 15px;
+}
+#hero-element {
+  background: url(../../img/grass2.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 800px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  height: 2000px;
+}
+
+.well .page-header {
+  margin-top: 0;
+}
+
+.well h1 {
+  margin-top: 0;
+}
+
+#ding {
+  position: fixed;
+  bottom: 0;
+  color: white
+}
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+#searchInput {
+  width: 200px;
+}
+
+.navbar-brand {
+  padding: 13px 15px;
+}
+.navbar-brand img {
+  height: 100%;
+  width: 100%;
+}
+
+
+/*.............................................................................
+                Styling for Transparent Navbar
+..............................................................................*/
+
+.navbar-absolute-bottom {
+  bottom: 0;
+  margin-bottom: 15px;
+  position: absolute;
+  width: 100%;
+}
+.navbar-toggle  {
+  background-color: #888;
+}
+.navbar {
+  transition: background-color 1s linear; /* to give fading effect */
+}
+.transparent {
+  background-color: transparent;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  border-radius: 0;
+}
+
+/*next 4 settings are for changing the color of Placeholder in a TextBox*/
+.transparent .form-control::-webkit-input-placeholder {
+  color: #ddd;;
+}
+.transparent .form-control::-moz-placeholder {
+  color: #ddd;;
+  opacity: 1;
+}
+.transparent .form-control:-moz-placeholder {
+  color: #ddd;;
+  opacity: 1;
+}
+.transparent .form-control:-ms-input-placeholder {
+  color: #ddd;;
+}
+
+.transparent .form-control{
+  background-color: #999;;
+  color: black;
+}
+.transparent .navbar-nav > li > a{
+  background-color: transparent;
+  color: white;
+  transition: background-color 1s linear;
+}
+.transparent .navbar-nav > .active {
+  background-color: inherit;
+  box-shadow: inset 0 2px 8px white, inset 0 -2px 4px white;
+  outline: 0;
+}
+.transparent .navbar-nav li > a:hover,
+.transparent .navbar-nav li > a:focus {
+  background-color: white;
+  color: black;
+  outline: 0;
+}
+
+
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+
+#myCarousel {
+  margin-top: 60px;
+}
+
+#myCarousel .item {
+  height: 400px;
+}
+
+#myCarousel>a {
+  outline: none;
+}
+#myCarousel>a:active {
+  background-color: #666;
+  transition: background-color 1.5s linear;
+}
+
+#myCarousel>a:hover {
+  color: #428bca;
+}
+
+#slide1 {
+  background: url(../../images/carousel_medium_01.jpg) top center no-repeat;
+}
+
+#slide2 {
+  background: url(../../images/carousel_medium_02.jpg) top center no-repeat;
+}
+
+#slide3 {
+  background: url(../../images/carousel_medium_03.jpg) top center no-repeat;
+}
+
+.carousel {
+  font-size: 24px;
+}
+
+.carousel h4 {
+  font-size: 36px;
+}
+
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+.alert {
+  display: none;
+  margin-top: 20px;
+}
+
+.well {
+  margin: 20px 0;
+}
+
+.panel {
+  text-align: center;
+}
+
+.tab-pane .thumbnail {
+  margin: 0 20px 20px 0;
+}
+
+[rel="tooltip"] {
+  color: #428bca;
+}
+
+[rel="tooltip"]:hover {
+  cursor: pointer;
+}
+.part1 {
+  color: white;
+  font-family: clonewars;
+  font-size: 36px;
+}
+.part1 h1 {
+  font-family: headliner;
+  font-size: 64px;
+}
+.hero-header {
+  color: white;
+  text-align: center;
+}
+.part3 {
+  color: white;
+  font-family: trench;
+  font-size: 24px;
+  font-weight: bold;
+}
+#div1 {
+  font-family: quango;
+  font-weight: lighter;
+}
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+  .hero-header h1 {
+    font-family: headliner;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+
+  .navbar-brand img{
+    max-height: 23px;
+  }
+  .hero-header h1 {
+    font-family: headliner;
+    font-size: 48px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+
+  #myCarousel .item {
+    height: 310px;
+  }
+
+  #slide1 {
+    background: url(../../images/carousel_small_01.jpg) top center no-repeat;
+  }
+
+  #slide2 {
+    background: url(../../images/carousel_small_02.jpg) top center no-repeat;
+  }
+
+  #slide3 {
+    background: url(../../images/carousel_small_03.jpg) top center no-repeat;
+  }
+
+  .carousel {
+    font-size: 16px;
+  }
+
+  .carousel h4 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .hero-header h1 {
+      font-family: headliner;
+      font-size: 60px;
+      font-weight: bolder;
+      letter-spacing: 3px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px) {
+    .hero-header h1 {
+      font-family: headliner;
+      font-size: 72px;
+      font-weight: bolder;
+      letter-spacing: 3px;
+    }
+}
+/* Large desktop */
+@media (min-width: 1200px) {
+
+  .hero-header h1 {
+    font-size: 88px;
+    font-family: headliner;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-shadow: 0 0 8px white;
+  }
+  #myCarousel .item {
+    height: 500px;
+  }
+
+  #slide1 {
+    background: url(../../images/carousel_large_01.jpg) top center no-repeat;
+  }
+
+  #slide2 {
+    background: url(../../images/carousel_large_02.jpg) top center no-repeat;
+  }
+
+  #slide3 {
+    background: url(../../images/carousel_large_03.jpg) top center no-repeat;
+  }
+}
