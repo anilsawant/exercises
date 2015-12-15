@@ -69,3 +69,15 @@ window.addEventListener('resize',function(){
      }
    };
 })( jQuery );
+
+function addPhoto() {
+  alert("Add your photo...");
+}
+function addCard() {
+  var div = document.getElementById('tab3');
+  var initialRow = div.innerHTML;
+  var newRow = '<form class="form-horizontal"><div class="form-group col-sm-4 "><label for="cardName" class="control-label">Card Name</label><input class="form-control" id="cardName" placeholder="Card Name" type="text"></div><div class="form-group col-sm-6"><label for="cardNumber" class="control-label">Card Number</label><input class="form-control" id="cardNumber" placeholder="Card Number" type="text"></div><div class="form-group col-sm-2" onclick="addCard();"><label class="control-label">Add card</label><p class="square-box" title="Add Card">+</p></div></form>';
+
+  div.innerHTML = initialRow + newRow;
+
+}

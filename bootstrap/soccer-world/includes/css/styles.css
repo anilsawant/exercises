@@ -345,6 +345,50 @@ ul.unstyled {
 .nav-tabs>li>a:focus {
     outline: none;
 }
+.tab-pane .horizontal-form {
+  margin-top: 10px;
+}
+.horizontal-form .form-group .form-control{
+  margin-bottom: 20px;
+}
+.tab-pane .thumbnail {
+  margin-top: 10px;
+}
+#addPhoto {
+  margin-left: -50px;
+}
+#addPhoto:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+#tab3 .form-group{
+  margin-right: 5px;
+}
+
+
+/* "Square" box
+..............................................................................*/
+
+.square-box {
+  background: #888;
+  border-radius: 3px;
+  color: white;
+  font-size: 37px;
+  font-weight: bold;
+  height: 40px;
+  margin: 0 10px;
+  margin-top: -5px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+}
+
+/* changes the background color of the list item when user hovers te mouse over it*/
+.square-box:hover {
+  background: #1abc9c;
+  cursor: pointer;
+}
+
 /* --------------------------------------
    Media Queries
    -------------------------------------- */
@@ -363,7 +407,7 @@ ul.unstyled {
 }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
 
   .navbar-brand img{
@@ -389,8 +433,18 @@ ul.unstyled {
     background: #5bc0de;
     outline: none;
   }
+  .tabbable {
+    padding-left: 0;
+  }
   .tabbable .tab-content {
     margin-top: 10px;
+  }
+  .horizontal-form {
+    padding-left: 0;
+    clear: both;
+  }
+  #tab3 .form-horizontal {
+    border-bottom: 1px solid #ddd;
   }
   #myCarousel .item {
     height: 310px;

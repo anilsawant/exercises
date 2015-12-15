@@ -41,18 +41,25 @@
               <div class="tab-content">
                 <!-- Personal Details tab -->
                 <div class="tab-pane active" id="tab1">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+
+                  <div>
+                    <img src="img/add_photo.png" class="thumbnail pull-left">
+                    <a class="label label-success" id="addPhoto" onclick="addPhoto();"><span class="glyphicon glyphicon-plus"></span></a>
+                  </div>
+                  <form class="horizontal-form col-sm-8">
+                    <div class="form-group">
+                      <label for="txtName">Full Name </label>
+                      <input type="text" class="form-control" id="txtName" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="txtArea">Email</label>
+                      <input type="email" class="form-control" id="txtEmail" placeholder="Email ID">
+                    </div>
+                    <div class="form-group">
+                      <label for="txtPhone">Phone</label>
+                      <input type="text" class="form-control" id="txtPhone" placeholder="Phone Number">
+                    </div>
+                  </form>
 
                 </div><!-- end tab1 -->
                 <!-- Address tab -->
@@ -60,40 +67,39 @@
                   <h4><span class="glyphicon glyphicon-map-marker"></span> Your location <small>More like your favourite surf spot</small></h4>
                   <form class="horizontal-form">
                     <div class="form-group">
-                      <label for="txtStreet" class="col-sm-4">Flat / Street</label>
-                      <input type="text" class="col-sm-8 form-control" id="txtStreet" placeholder="Flat / Street">
+                      <label for="txtStreet">Flat / Street</label>
+                      <input type="text" class="form-control" id="txtStreet" placeholder="Flat / Street">
                     </div>
                     <div class="form-group">
-                      <label for="txtArea" class="col-sm-4">Area</label>
-                      <input type="text" class="col-sm-8 form-control" id="txtArea" placeholder="Area">
+                      <label for="txtArea">Area</label>
+                      <input type="text" class="form-control" id="txtArea" placeholder="Area">
                     </div>
                     <div class="form-group">
-                      <label for="txtCity" class="col-sm-4">City</label>
-                      <input type="text" class="col-sm-8 form-control" id="txtCity" placeholder="City">
+                      <label for="txtCity">City</label>
+                      <input type="text" class=" form-control" id="txtCity" placeholder="City">
                     </div>
                     <div class="form-group">
-                      <label for="txtState" class="col-sm-4">State</label>
-                      <input type="text" class="col-sm-8 form-control" id="txtState" placeholder="State">
+                      <label for="txtState">State, Country</label>
+                      <input type="text" class="form-control" id="txtState" placeholder="State, Country" required="required">
                     </div>
-
                   </form>
                 </div><!-- End tab2 -->
                 <!-- Card Details tab -->
                 <div class="tab-pane" id="tab3">
-                  <h4>Tab 2</h4>
-                  <img src="images/badge_html5.jpg" class="thumbnail pull-left">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <form class="form-horizontal">
+                    <div class="form-group col-sm-4 ">
+                      <label for="cardName" class="control-label">Card Name</label>
+                      <input class="form-control" id="cardName" placeholder="Card Name" type="text">
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label for="cardNumber" class="control-label">Card Number</label>
+                      <input class="form-control" id="cardNumber" placeholder="Card Number" type="text">
+                    </div>
+                    <div class="form-group col-sm-2" onclick="addCard();">
+                      <label class="control-label">Add card</label>
+                      <p class="square-box" title="Add Card">+</p>
+                    </div>
+                  </form>
                 </div><!-- End tab3 -->
               </div><!-- End tab-content -->
             </div><!-- End tabbable -->
