@@ -81,3 +81,59 @@ function addCard() {
   div.innerHTML = initialRow + newRow;
 
 }
+
+function showTiles( which ) {
+  var filter = which.id;
+  var wrapper = document.getElementById('tiles-wrapper');
+  var all = '  <!-- Row 1 --><div class="row clearfix">'
+            + '<div class="col-sm-4 tile clearfix"><a href="http://www.fcbarcelona.com" target="_blank"><img src="img/soccer/barcelona.jpg" alt="" /><h3>Barcelona</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>LA Liga</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.manutd.com" target="_blank"><img src="img/soccer/manu3.jpg" alt="" /><h3>Manchester United</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.arsenal.com" target="_blank"><img src="img/soccer/arsenal.jpg" alt="" /><h3>Arsenal</h3></a><ul><li>Barclays Premeir League</li></ul></div>'
+            + '</div>'
+            + '<!-- Row 2 --><div class="row">'
+            + '<div class="col-sm-4 tile"><a href="http://www.tottenhamhotspur.com" target="_blank"><img src="img/soccer/tottenham.jpg" alt="" /><h3>Tottenham Hotspur</h3></a><ul><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.fcbayern.de" target="_blank"><img src="img/soccer/bayern.jpg" alt="" /><h3>Bayern Munich</h3></a><ul><li>Champions League</li><li>UEFA League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.chelseafc.com" target="_blank"><img src="img/soccer/chelsea.jpg" alt="" /><h3>Chelsea</h3></a><ul><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+            + '</div>'
+            + '<!-- Row 3 --><div class="row">'
+            + '<div class="col-sm-4 tile"><a href="http://www.juventus.com" target="_blank"><img src="img/soccer/juventus.jpg" alt="" /><h3>Juventus</h3></a><ul><li>Champions League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.mcfc.com" target="_blank"><img src="img/soccer/mancity.jpg" alt="" /><h3>Manchester City</h3></a><ul><li>Champions League</li><li>Barclays Premier League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.realmadrid.com" target="_blank"><img src="img/soccer/realmadrid.png" alt="" /><h3>Real Madrid</h3></a><ul><li>UEFA League</li><li>LA Liga</li></ul></div>'
+            + '</div>';
+
+  var bpl = '  <!-- Row 1 --><div class="row clearfix">'
+            + '<div class="col-sm-4 tile"><a href="http://www.manutd.com" target="_blank"><img src="img/soccer/manu3.jpg" alt="" /><h3>Manchester United</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.arsenal.com" target="_blank"><img src="img/soccer/arsenal.jpg" alt="" /><h3>Arsenal</h3></a><ul><li>Barclays Premeir League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.tottenhamhotspur.com" target="_blank"><img src="img/soccer/tottenham.jpg" alt="" /><h3>Tottenham Hotspur</h3></a><ul><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+            + '</div>'
+            + '<!-- Row 2 --><div class="row">'
+            + '<div class="col-sm-4 tile"><a href="http://www.chelseafc.com" target="_blank"><img src="img/soccer/chelsea.jpg" alt="" /><h3>Chelsea</h3></a><ul><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.mcfc.com" target="_blank"><img src="img/soccer/mancity.jpg" alt="" /><h3>Manchester City</h3></a><ul><li>Champions League</li><li>Barclays Premier League</li></ul></div>'
+            + '</div>';
+
+  var cl = '  <!-- Row 1 --><div class="row clearfix">'
+            + '<div class="col-sm-4 tile clearfix"><a href="http://www.fcbarcelona.com" target="_blank"><img src="img/soccer/barcelona.jpg" alt="" /><h3>Barcelona</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>LA Liga</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.manutd.com" target="_blank"><img src="img/soccer/manu3.jpg" alt="" /><h3>Manchester United</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.fcbayern.de" target="_blank"><img src="img/soccer/bayern.jpg" alt="" /><h3>Bayern Munich</h3></a><ul><li>Champions League</li><li>UEFA League</li></ul></div>'
+            + '</div>'
+            + '<!-- Row 2 --><div class="row">'
+            + '<div class="col-sm-4 tile"><a href="http://www.juventus.com" target="_blank"><img src="img/soccer/juventus.jpg" alt="" /><h3>Juventus</h3></a><ul><li>Champions League</li></ul></div>'
+            + '<div class="col-sm-4 tile"><a href="http://www.mcfc.com" target="_blank"><img src="img/soccer/mancity.jpg" alt="" /><h3>Manchester City</h3></a><ul><li>Champions League</li><li>Barclays Premier League</li></ul></div>'
+            + '</div>';
+  var laliga = '  <!-- Row 1 --><div class="row clearfix">'
+              + '<div class="col-sm-4 tile clearfix"><a href="http://www.fcbarcelona.com" target="_blank"><img src="img/soccer/barcelona.jpg" alt="" /><h3>Barcelona</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>LA Liga</li></ul></div>'
+              + '<div class="col-sm-4 tile"><a href="http://www.realmadrid.com" target="_blank"><img src="img/soccer/realmadrid.png" alt="" /><h3>Real Madrid</h3></a><ul><li>UEFA League</li><li>LA Liga</li></ul></div>'
+              + '</div>';
+
+  var uefa = '  <!-- Row 1 --><div class="row clearfix">'
+              + '<div class="col-sm-4 tile clearfix"><a href="http://www.fcbarcelona.com" target="_blank"><img src="img/soccer/barcelona.jpg" alt="" /><h3>Barcelona</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>LA Liga</li></ul></div>'
+              + '<div class="col-sm-4 tile"><a href="http://www.manutd.com" target="_blank"><img src="img/soccer/manu3.jpg" alt="" /><h3>Manchester United</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+              + '<div class="col-sm-4 tile"><a href="http://www.tottenhamhotspur.com" target="_blank"><img src="img/soccer/tottenham.jpg" alt="" /><h3>Tottenham Hotspur</h3></a><ul><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+              + '</div>'
+              + '<!-- Row 2 --><div class="row">'
+              + '<div class="col-sm-4 tile"><a href="http://www.chelseafc.com" target="_blank"><img src="img/soccer/chelsea.jpg" alt="" /><h3>Chelsea</h3></a><ul><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
+              + '<div class="col-sm-4 tile"><a href="http://www.realmadrid.com" target="_blank"><img src="img/soccer/realmadrid.png" alt="" /><h3>Real Madrid</h3></a><ul><li>UEFA League</li><li>LA Liga</li></ul></div>'
+              + '</div>';
+
+  wrapper.innerHTML = cl;
+}

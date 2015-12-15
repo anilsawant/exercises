@@ -357,6 +357,7 @@ ul.unstyled {
 #addPhoto {
   margin-left: -50px;
 }
+
 #addPhoto:hover {
   text-decoration: none;
   cursor: pointer;
@@ -364,7 +365,66 @@ ul.unstyled {
 #tab3 .form-group{
   margin-right: 5px;
 }
+.pagination {
+  float: left;
+}
+.filter-tabs button {
+  float: right;
+  margin: 20px 0;
+}
 
+/* Tiles styling*/
+.tile {
+  margin-bottom: 30px;
+}
+
+.tile img {
+  width: 100%;
+  height: 200px;
+  box-shadow: 2px -1px 3px #444;
+}
+
+.tile a {
+  text-decoration: none;
+}
+
+.tile h3 {
+  color: #666;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+.tile h3:hover {
+  color: #1abc9c;
+  text-shadow: 0 0 1px #00ff99;
+}
+
+.tile ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.tile li {
+  color: #888;
+  display: inline-block;
+  margin-left: 0;
+  text-shadow: 1px 0 1px #888;
+}
+
+.tile li::after {
+  content: '/';
+  padding: 0 10px;
+}
+
+.tile li:last-child::after {
+  content: '';
+}
+
+.tile p {
+  margin: 15px 0;
+}
 
 /* "Square" box
 ..............................................................................*/
@@ -383,7 +443,7 @@ ul.unstyled {
   width: 40px;
 }
 
-/* changes the background color of the list item when user hovers te mouse over it*/
+/* changes the background color when user hovers te mouse over it*/
 .square-box:hover {
   background: #1abc9c;
   cursor: pointer;
@@ -446,6 +506,15 @@ ul.unstyled {
   #tab3 .form-horizontal {
     border-bottom: 1px solid #ddd;
   }
+  .tile {
+    text-align: center;
+  }
+  .tile img {
+    width: auto;
+    height: auto;
+    box-shadow: 2px -1px 3px #444;
+  }
+
   #myCarousel .item {
     height: 310px;
   }
