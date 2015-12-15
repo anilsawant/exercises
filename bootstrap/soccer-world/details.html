@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SoccerWorld | Bootstrap</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="includes/css/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="includes/css/styles.css">
+
+  </head>
+
+  <body>
+    <a href="#userDetailsModal" role="button" class="btn btn-info" data-toggle="modal" >Click here to enter your details</a>
+
+    <div class="modal fade" id="userDetailsModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal" >&times;</button>
+            <h4 class="modal-title">Fill in your details</h4>
+          </div><!-- End modal-header -->
+
+          <div class="modal-body col-sm-12">
+    				<div class="col-sm-4 feature">
+    					<div class="panel">
+    						<div class="panel-heading">
+    							<h3 class="panel-title">Tell us about you</h3>
+    						</div><!-- end panel-heading -->
+    						<img src="img/fill_form.png" alt="fill_form.png">
+              </div><!-- end panel -->
+    				</div><!-- end feature -->
+
+            <div class="tabbable col-sm-8">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">Personal Details</a></li>
+                <li><a href="#tab2" data-toggle="tab">Where do you stay?</a></li>
+                <li><a href="#tab3" data-toggle="tab">Save your Cards</a></li>
+              </ul>
+
+              <div class="tab-content">
+                <!-- Personal Details tab -->
+                <div class="tab-pane active" id="tab1">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+
+                </div><!-- end tab1 -->
+                <!-- Address tab -->
+                <div class="tab-pane" id="tab2">
+                  <h4><span class="glyphicon glyphicon-map-marker"></span> Your location <small>More like your favourite surf spot</small></h4>
+                  <form class="horizontal-form">
+                    <div class="form-group">
+                      <label for="txtStreet" class="col-sm-4">Flat / Street</label>
+                      <input type="text" class="col-sm-8 form-control" id="txtStreet" placeholder="Flat / Street">
+                    </div>
+                    <div class="form-group">
+                      <label for="txtArea" class="col-sm-4">Area</label>
+                      <input type="text" class="col-sm-8 form-control" id="txtArea" placeholder="Area">
+                    </div>
+                    <div class="form-group">
+                      <label for="txtCity" class="col-sm-4">City</label>
+                      <input type="text" class="col-sm-8 form-control" id="txtCity" placeholder="City">
+                    </div>
+                    <div class="form-group">
+                      <label for="txtState" class="col-sm-4">State</label>
+                      <input type="text" class="col-sm-8 form-control" id="txtState" placeholder="State">
+                    </div>
+
+                  </form>
+                </div><!-- End tab2 -->
+                <!-- Card Details tab -->
+                <div class="tab-pane" id="tab3">
+                  <h4>Tab 2</h4>
+                  <img src="images/badge_html5.jpg" class="thumbnail pull-left">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div><!-- End tab3 -->
+              </div><!-- End tab-content -->
+            </div><!-- End tabbable -->
+          </div><!-- End modal-body -->
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-info" >Save Changes</button>
+          </div><!-- End modal-footer -->
+
+        </div><!-- end modal-content -->
+      </div><!-- End modal-dialog -->
+    </div><!-- End myModal -->
+
+    <!-- First try for the online version of jQuery-->
+  <script src="http://code.jquery.com/jquery.js"></script>
+
+  <!-- If no online access, fallback to our hardcoded version of jQuery -->
+  <script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+
+    <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="includes/js/script.js"></script>
+
+  </body>
+</html>

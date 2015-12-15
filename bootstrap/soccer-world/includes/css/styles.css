@@ -22,6 +22,67 @@
 /* --------------------------------------
    Layout
    -------------------------------------- */
+
+.container {
+  background: transparent;
+}
+.vertical-gap-100 {
+  min-height: 100px;
+  z-index: 0;
+}
+#features {
+  background: rgba(0,0,0,.6);
+  padding-top: 15px;
+}
+.panel {
+  background: rgba(0,0,0,.8);
+  border: black;
+  box-shadow: 1px -1px 2px #999;
+}
+.panel > img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  max-height: 340px;
+}
+.panel > p {
+  color: #f2f2f2;
+}
+.panel-heading {
+  background: rgba(255,255,255,.4);
+  border-bottom: 0;
+}
+.panel-title {
+  color: #f2f2f2;
+  font-family: quango;
+  font-size: 24px;
+  text-shadow: 0 1px 0 #333;
+}
+
+
+/*.............................................................................
+          Footer Styling
+.............................................................................*/
+
+footer {
+	background: #333;
+	color: #eee;
+	font-size: 11px;
+	padding: 20px;
+}
+.social-media-links ul {
+  display: inline-block;
+}
+.social-media-links li {
+  display: inline;
+  opacity: .3;
+}
+.social-media-links li:hover {
+  opacity: 1.0;
+}
+
+
+
 #inputMessage {
   margin-bottom: 15px;
 }
@@ -29,11 +90,21 @@
   background: url(../../img/grass2.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  margin-bottom: 15px;
+  min-height: 500px;
+  padding-bottom: 100px ;
+  padding-top: 60px;
+  position: relative;
+}
+
+#hero-element2 {
+  background: url(../../img/stadium.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   height: 800px;
   position: relative;
   margin-bottom: 15px;
 }
-
 /* --------------------------------------
    Typography
    -------------------------------------- */
@@ -56,7 +127,10 @@ body {
   bottom: 0;
   color: white
 }
-
+ul.unstyled {
+	list-style: none;
+	padding: 0;
+}
 /* --------------------------------------
    Navbar
    -------------------------------------- */
@@ -67,8 +141,16 @@ body {
 .navbar-brand {
   padding: 13px 15px;
 }
+.transparent .navbar-brand{
+  background: rgba(242,242,242,.4);
+  transition: background 1s linear;
+}
+.transparent .navbar-brand:hover {
+  background: white;
+}
 .navbar-brand img {
   height: 100%;
+  max-height: 24px;
   width: 100%;
 }
 
@@ -88,6 +170,10 @@ body {
 }
 .navbar {
   transition: background-color 1s linear; /* to give fading effect */
+  z-index: 99;
+}
+.navbar .active a {
+  transition: background-color 2s linear; /* to give fading effect */
 }
 .transparent {
   background-color: transparent;
@@ -141,11 +227,9 @@ body {
 #myCarousel {
   margin-top: 60px;
 }
-
 #myCarousel .item {
   height: 400px;
 }
-
 #myCarousel>a {
   outline: none;
 }
@@ -153,27 +237,21 @@ body {
   background-color: #666;
   transition: background-color 1.5s linear;
 }
-
 #myCarousel>a:hover {
   color: #428bca;
 }
-
 #slide1 {
   background: url(../../images/carousel_medium_01.jpg) top center no-repeat;
 }
-
 #slide2 {
   background: url(../../images/carousel_medium_02.jpg) top center no-repeat;
 }
-
 #slide3 {
   background: url(../../images/carousel_medium_03.jpg) top center no-repeat;
 }
-
 .carousel {
   font-size: 24px;
 }
-
 .carousel h4 {
   font-size: 36px;
 }
@@ -219,6 +297,15 @@ body {
   color: white;
   text-align: center;
 }
+.hero-header h1 {
+  clear: both;
+}
+.hero-header img {
+  height: 100%;
+  width: 100%;
+  max-width: 230px;
+  max-height: 230px;
+}
 .part3 {
   color: white;
   font-family: trench;
@@ -230,6 +317,34 @@ body {
   font-weight: lighter;
 }
 
+
+/*.............................................................................
+                    Modal Window
+..............................................................................*/
+.modal-body .feature {
+  padding-left: 0;
+  padding-right: 0;
+}
+.modal-body .nav-tabs {
+  /*display: inline-block;
+  margin-left: 20px;*/
+  width: auto;
+}
+.modal-body .tab-content {
+  clear: both;
+}
+.modal-footer {
+  clear: both;
+}
+.tabbable {
+  padding-left: 10px;
+  padding-right: 0;
+}
+.nav-tabs>li>a,
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:focus {
+    outline: none;
+}
 /* --------------------------------------
    Media Queries
    -------------------------------------- */
@@ -237,11 +352,14 @@ body {
 /* Portrait & landscape phone */
 @media (max-width: 480px) {
   .hero-header h1 {
-    font-family: headliner;
-    font-size: 30px;
-    font-weight: bolder;
-    letter-spacing: 1px;
+    display: none;
   }
+  .hero-header p {
+    display: none;
+  }
+}
+@media (max-width: 510px) {
+
 }
 
 /* Landscape phone to portrait tablet */
@@ -252,12 +370,28 @@ body {
     max-height: 23px;
   }
   .hero-header h1 {
-    font-family: headliner;
-    font-size: 48px;
-    font-weight: bolder;
-    letter-spacing: 2px;
+    display: none;
   }
-
+  .hero-header p {
+    display: none;
+  }
+  .nav-tabs li{
+    display: block;
+    margin-bottom: 2px;
+    width: 100%;
+  }
+  .nav-tabs li>a{
+    background: #f2f2f2;
+  }
+  .nav-tabs>li.active>a,
+  .nav-tabs>li.active>a:active,
+  .nav-tabs>li.active>a:focus {
+    background: #5bc0de;
+    outline: none;
+  }
+  .tabbable .tab-content {
+    margin-top: 10px;
+  }
   #myCarousel .item {
     height: 310px;
   }
@@ -282,33 +416,62 @@ body {
     font-size: 24px;
   }
 }
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+        right: auto;
+        left: 50%;
+        width: auto;
+        padding-top: 30px;
+        padding-bottom: 30px
+    }
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+    }
+}
 
 @media (min-width:768px) and (max-width:991px){
     .hero-header h1 {
+      clear: both;
       font-family: headliner;
       font-size: 60px;
       font-weight: bolder;
       letter-spacing: 3px;
     }
+    .hero-header p {
+      font-family: clonewars;
+      font-size: 32px;
+    }
 }
 @media (min-width:992px) and (max-width:1199px) {
     .hero-header h1 {
+      clear: both;
       font-family: headliner;
       font-size: 72px;
       font-weight: bolder;
       letter-spacing: 3px;
+    }
+    .hero-header p {
+      font-family: clonewars;
+      font-size: 40px;
     }
 }
 /* Large desktop */
 @media (min-width: 1200px) {
 
   .hero-header h1 {
+    clear: both;
     font-size: 88px;
     font-family: headliner;
     font-weight: bolder;
     letter-spacing: 5px;
     text-shadow: 0 0 8px white;
   }
+  .hero-header p {
+    font-family: clonewars;
+    font-size: 40px;
+  }
+
   #myCarousel .item {
     height: 500px;
   }
