@@ -1,5 +1,7 @@
 $( function() {
 
+  show();  // Function call to show Navigation bar and GotoTop icon
+
   $('#alertMe').click( function(e) {
     e.preventDefault();
     $('#successAlert').slideDown();
@@ -38,16 +40,22 @@ function show() {
       navbar.className = 'navbar navbar-absolute-bottom transparent';
     }
   }
+  if( y1 > 900 || y2 > 900 ) {
+    document.getElementById('gototop').style.visibility = 'visible';
+
+  }else {
+    document.getElementById('gototop').style.visibility = 'collapse';
+  }
 }
 
-window.addEventListener('resize',function(){
-  var w = Math.max(document.documentElement.clientWidth);
-  document.getElementById('ding').innerHTML = w+10;
-
-  // if( $("[name='hero-panel']").length )
-  //   $("[name='hero-panel']").normalizeHeight();
-
-},true);
+// window.addEventListener('resize',function(){
+//   var w = Math.max(document.documentElement.clientWidth);
+//   document.getElementById('ding').innerHTML = w+10;
+//
+//   // if( $("[name='hero-panel']").length )
+//   //   $("[name='hero-panel']").normalizeHeight();
+//
+// },true);
 
 
 /*
@@ -83,8 +91,7 @@ function addCard() {
 }
 
 function showTiles( which ) {
-  var filter = which.id;
-  var wrapper = document.getElementById('tiles-wrapper');
+
   var all = '  <!-- Row 1 --><div class="row clearfix">'
             + '<div class="col-sm-4 tile clearfix"><a href="http://www.fcbarcelona.com" target="_blank"><img src="img/soccer/barcelona.jpg" alt="" /><h3>Barcelona</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>LA Liga</li></ul></div>'
             + '<div class="col-sm-4 tile"><a href="http://www.manutd.com" target="_blank"><img src="img/soccer/manu3.jpg" alt="" /><h3>Manchester United</h3></a><ul><li>Champions League</li><li>UEFA League</li><li>Barclays Premier League</li></ul></div>'
@@ -135,5 +142,38 @@ function showTiles( which ) {
               + '<div class="col-sm-4 tile"><a href="http://www.realmadrid.com" target="_blank"><img src="img/soccer/realmadrid.png" alt="" /><h3>Real Madrid</h3></a><ul><li>UEFA League</li><li>LA Liga</li></ul></div>'
               + '</div>';
 
-  wrapper.innerHTML = cl;
+  var league1 = {};
+  league1.name = 'all';
+  league1.value = all;
+
+  var league2 = {};
+  league2.name = 'bpl';
+  league2.value = bpl;
+
+  var league3 = {};
+  league3.name = 'cl';
+  league3.value = cl;
+
+  var league4 = {};
+  league4.name = 'laliga';
+  league4.value = laliga;
+
+  var league5 = {};
+  league5.name = 'uefa';
+  league5.value = uefa;
+
+  var obj = [];
+  obj.push(league1);
+  obj.push(league2);
+  obj.push(league3);
+  obj.push(league4);
+  obj.push(league5);
+  var wrapper = document.getElementById('tiles-wrapper');
+  for( var i=0; i < obj.length; i++) {
+    if( which.id == obj[i].name ) {
+      wrapper.innerHTML = obj[i].value;
+      break;
+    }
+  }
+
 }

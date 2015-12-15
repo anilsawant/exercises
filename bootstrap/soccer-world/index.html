@@ -12,7 +12,7 @@
   <body>
     <div id="hero-element" class="container-fluid">
       <!-- Transparent Navigation bar -->
-      <div id="main-navbar" class="navbar navbar-absolute-bottom transparent">
+      <nav id="main-navbar" class="navbar navbar-absolute-bottom transparent">
         <div class="container">
           <!--  This button appears when the max-width of the viewport is 768px-->
           <button type="button" class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse">
@@ -61,7 +61,7 @@
 
             <ul class="nav navbar-nav pull-right">
               <li>
-                <a href="#"><b>Portfolio</b></a>
+                <a href="#portfolio"><b>Portfolio</b></a>
               </li>
               <li>
                 <a href="#"><b>Contact</b></a>
@@ -89,7 +89,7 @@
             </ul>
           </div>
         </div><!-- end container-->
-      </div><!-- end main-navbar-->
+      </nav><!-- end main-navbar-->
 
       <div class="container">
 
@@ -121,10 +121,355 @@
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-    </div>
+    </div><!-- End container-->
 
-    <p id="ding">Show here</p>
-    <a href="#top"><p class="gototop" title="Go to Top">^</p></a>
+    <div id="hero-element2" class="container-fluid">
+      <div class="container">
+        <div class="row" id="features">
+  				<div class="col-sm-4 feature">
+  					<div class="panel" name="hero-panel">
+  						<div class="panel-heading">
+  							<h3 class="panel-title">Choose a fixture</h3>
+  						</div><!-- end panel-heading -->
+  						<img src="img/fixtures.png" alt="fixtures.png">
+
+  						<p class="lead">Select from a plathora of fixtures.<small>You will be lost exploring...</small></p>
+
+  						<a class="btn btn-success btn-block">Look at the fixtures</a>
+  					</div><!-- end panel -->
+  				</div><!-- end feature -->
+
+  				<div class="col-sm-4 feature">
+  					<div class="panel" name="hero-panel">
+  						<div class="panel-heading">
+  							<h3 class="panel-title">Tell us about you</h3>
+  						</div><!-- end panel-heading -->
+  						<img src="img/fill_form.png" alt="fill_form.png">
+
+  						<p class="lead">All we need to know is your Name, Email-id and a little more... </p>
+              <a href="#userDetailsModal" role="button" class="btn btn-info btn-block" data-toggle="modal" >Enter your details</a>
+            </div><!-- end panel -->
+  				</div><!-- end feature -->
+
+          <!-- Modal window that appears after clicking Enter user details button -->
+          <div class="modal fade" id="userDetailsModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button class="close" data-dismiss="modal" >&times;</button>
+                  <h4 class="modal-title">Fill in your details</h4>
+                </div><!-- End modal-header -->
+
+                <div class="modal-body col-sm-12">
+                  <div class="col-sm-4 feature">
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Tell us about you</h3>
+                      </div><!-- end panel-heading -->
+                      <img src="img/fill_form.png" alt="fill_form.png">
+                    </div><!-- end panel -->
+                  </div><!-- end feature -->
+
+                  <div class="tabbable col-sm-8">
+                    <ul class="nav nav-tabs">
+                      <li class="active"><a href="#tab1" data-toggle="tab">Personal Details</a></li>
+                      <li><a href="#tab2" data-toggle="tab">Where do you stay?</a></li>
+                      <li><a href="#tab3" data-toggle="tab">Save your Cards</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                      <!-- Personal Details tab -->
+                      <div class="tab-pane active" id="tab1">
+
+                        <div>
+                          <img src="img/add_photo.png" class="thumbnail pull-left">
+                          <a class="label label-success" id="addPhoto" onclick="addPhoto();"><span class="glyphicon glyphicon-plus"></span></a>
+                        </div>
+                        <form class="horizontal-form col-sm-8">
+                          <div class="form-group">
+                            <label for="txtName">Full Name </label>
+                            <input type="text" class="form-control" id="txtName" placeholder="Full Name">
+                          </div>
+                          <div class="form-group">
+                            <label for="txtArea">Email</label>
+                            <input type="email" class="form-control" id="txtEmail" placeholder="Email ID">
+                          </div>
+                          <div class="form-group">
+                            <label for="txtPhone">Phone</label>
+                            <input type="text" class="form-control" id="txtPhone" placeholder="Phone Number">
+                          </div>
+                        </form>
+
+                      </div><!-- end tab1 -->
+                      <!-- Address tab -->
+                      <div class="tab-pane" id="tab2">
+                        <h4><span class="glyphicon glyphicon-map-marker"></span> Your location <small>More like your favourite surf spot</small></h4>
+                        <form class="horizontal-form">
+                          <div class="form-group">
+                            <label for="txtStreet">Flat / Street</label>
+                            <input type="text" class="form-control" id="txtStreet" placeholder="Flat / Street">
+                          </div>
+                          <div class="form-group">
+                            <label for="txtArea">Area</label>
+                            <input type="text" class="form-control" id="txtArea" placeholder="Area">
+                          </div>
+                          <div class="form-group">
+                            <label for="txtCity">City</label>
+                            <input type="text" class=" form-control" id="txtCity" placeholder="City">
+                          </div>
+                          <div class="form-group">
+                            <label for="txtState">State, Country</label>
+                            <input type="text" class="form-control" id="txtState" placeholder="State, Country" required="required">
+                          </div>
+                        </form>
+                      </div><!-- End tab2 -->
+                      <!-- Card Details tab -->
+                      <div class="tab-pane" id="tab3">
+                        <form class="form-horizontal">
+                          <div class="form-group col-sm-4 ">
+                            <label for="cardName" class="control-label">Card Name</label>
+                            <input class="form-control" id="cardName" placeholder="Card Name" type="text">
+                          </div>
+                          <div class="form-group col-sm-6">
+                            <label for="cardNumber" class="control-label">Card Number</label>
+                            <input class="form-control" id="cardNumber" placeholder="Card Number" type="text">
+                          </div>
+                          <div class="form-group col-sm-2" onclick="addCard();">
+                            <label class="control-label">Add card</label>
+                            <p class="square-box" title="Add Card">+</p>
+                          </div>
+                        </form>
+                      </div><!-- End tab3 -->
+                    </div><!-- End tab-content -->
+                  </div><!-- End tabbable -->
+                </div><!-- End modal-body -->
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-info" >Save Changes</button>
+                </div><!-- End modal-footer -->
+
+              </div><!-- end modal-content -->
+            </div><!-- End modal-dialog -->
+          </div><!-- End userDetailsModal -->
+
+  				<div class="col-sm-4 feature">
+  					<div class="panel" name="hero-panel">
+  						<div class="panel-heading">
+  							<h3 class="panel-title">Complete the payment</h3>
+  						</div><!-- end panel-heading -->
+  						<img src="img/pay.png" alt="pay.png">
+
+  						<p class="lead">Select a payment mode, apply any coupons , and hit Pay</p>
+
+  						<a class="btn btn-success btn-block">Pay now</a>
+  					</div><!-- end panel -->
+  				</div><!-- end feature -->
+  			</div><!-- end features -->
+    </div> <!-- end container -->
+    </div><!-- End hero-element2-->
+
+    <!-- Main wrapper -->
+    <div class="container clearfix" id="portfolio">
+      <!-- Tabs to filter the Tiles displayed -->
+      <div class="col-sm-12 filter-tabs pull-left">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a id="all" onclick="showTiles(this);">Show All</a></li>
+          <li><a id="bpl" onclick="showTiles(this);">Barclays Premier League</a></li>
+          <li><a id="cl" onclick="showTiles(this);">Champions League</a></li>
+          <li><a id="uefa" onclick="showTiles(this);">UEFA League</a></li>
+          <li><a id="laliga" onclick="showTiles(this);">La Liga</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Link to shuffle the tiles -->
+        <button type="button" class="btn btn-default"> <span class="glyphicon glyphicon-random"></span></button>
+      </div>
+
+      <!--
+        Wrapper for the Tiles.
+        Tiles-wrapper is constructed as n X 3 matrix with columns fixed at three and rows being dynamic.
+      -->
+      <div id="tiles-wrapper" class="clearfix">
+        <!-- Row 1-->
+        <div class="row clearfix">
+          <!-- Tile 1-->
+          <div class="col-sm-4 tile clearfix">
+            <a href="http://www.fcbarcelona.com" target="_blank">
+              <img src="img/soccer/barcelona.jpg" alt="" />
+              <h3>Barcelona</h3>
+            </a>
+            <ul>
+              <li>Champions League</li>
+              <li>UEFA League</li>
+              <li>LA Liga</li>
+            </ul>
+          </div>
+		  <!-- Tile 2 -->
+          <div class="col-sm-4 tile">
+            <a href="http://www.manutd.com" target="_blank">
+              <img src="img/soccer/manu3.jpg" alt="" />
+              <h3>Manchester United</h3>
+            </a>
+            <ul>
+              <li>Champions League</li>
+              <li>UEFA League</li>
+              <li>Barclays Premier League</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 tile">
+            <a href="http://www.arsenal.com" target="_blank">
+              <img src="img/soccer/arsenal.jpg" alt="" />
+              <h3>Arsenal</h3>
+            </a>
+            <ul>
+              <li>Barclays Premeir League</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row">
+          <div class="col-sm-4 tile">
+            <a href="http://www.tottenhamhotspur.com" target="_blank">
+              <img src="img/soccer/tottenham.jpg" alt="" />
+              <h3>Tottenham Hotspur</h3>
+            </a>
+            <ul>
+              <li>UEFA League</li>
+              <li>Barclays Premier League</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 tile">
+            <a href="http://www.fcbayern.de" target="_blank">
+              <img src="img/soccer/bayern.jpg" alt="" />
+              <h3>Bayern Munich</h3>
+            </a>
+            <ul>
+              <li>Champions League</li>
+              <li>UEFA League</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 tile">
+            <a href="http://www.chelseafc.com" target="_blank">
+              <img src="img/soccer/chelsea.jpg" alt="" />
+              <h3>Chelsea</h3>
+            </a>
+            <ul>
+              <li>UEFA League</li>
+              <li>Barclays Premier League</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row">
+          <div class="col-sm-4 tile">
+            <a href="http://www.juventus.com" target="_blank">
+              <img src="img/soccer/juventus.jpg" alt="" />
+              <h3>Juventus</h3>
+            </a>
+            <ul>
+              <li>Champions League</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 tile">
+            <a href="http://www.mcfc.com" target="_blank">
+              <img src="img/soccer/mancity.jpg" alt="" />
+              <h3>Manchester City</h3>
+            </a>
+            <ul>
+              <li>Champions League</li>
+              <li>Barclays Premier League</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 tile">
+            <a href="http://www.realmadrid.com" target="_blank">
+              <img src="img/soccer/realmadrid.png" alt="" />
+              <h3>Real Madrid</h3>
+            </a>
+            <ul>
+              <li>UEFA League</li>
+              <li>LA Liga</li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- End tiles-wrapper -->
+    </div><!-- End container -->
+
+    <footer>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-2">
+    			<h6>Copyright &copy; 2015 SoccerWorld.</h6>
+    			</div><!-- end col-sm-2 -->
+
+    			<div class="col-sm-4">
+    				<h6>About Us</h6>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    			</div><!-- end col-sm-4 -->
+
+          <!-- Navigation links to pages and bookmarks -->
+    			<div class="col-sm-2">
+    				<h6>Navigation</h6>
+    				<ul class="unstyled">
+    					<li><a href="#">Home</a></li>
+    					<li><a href="#portfolio">Portfolio</a></li>
+    					<li><a href="#">Links</a></li>
+    					<li><a href="#">Contact</a></li>
+    				</ul>
+    			</div><!-- end col-sm-2 -->
+
+          <!-- Social Media links for Follow Us-->
+    			<div class="col-sm-3 social-media-links">
+    				<h6>Follow Us</h6>
+    				<ul class="unstyled">
+              <li>
+                <a href="http://www.facebook.com" target="_blank"><img src="img/icons//facebook.png" alt="facebook.png" /></a>
+              </li>
+              <li>
+                <a href="http://www.twitter.com" target="_blank"><img src="img/icons/twitter.png" alt="twitter.png" /></a>
+              </li>
+              <li>
+                <a href="http://www.youtube.com" target="_blank"><img src="img/icons/youtube.png" alt="youtube.png" /></a>
+              </li>
+    				</ul>
+            <ul class="unstyled">
+              <li>
+                <a href="http://www.skype.com" target="_blank"><img src="img/icons/skype.png" alt="skype.png" /></a>
+              </li>
+              <li>
+                <a href="http://www.plus.google.com" target="_blank"><img src="img/icons/googleplus.png" alt="googleplus.png" /></a>
+              </li>
+              <li>
+                <a href="http://www.pinterest.com" target="_blank"><img src="img/icons/pinterest.png" alt="pinterest.png" /></a>
+              </li>
+            </ul>
+    			</div><!-- end col-sm-2 -->
+
+    			<div class="col-sm-1">
+    				<h6>Coded with <span class="glyphicon glyphicon-heart"></span> by Anil Sawant</h6>
+    			</div><!-- end col-sm-2 -->
+    		</div><!-- end row -->
+    	</div><!-- end container -->
+    </footer>
+
+    <a href="#top" id="gototop"><p class="square-box" title="Go to Top">^</p></a>
+
     <!-- First try for the online version of jQuery-->
   <script src="http://code.jquery.com/jquery.js"></script>
 
