@@ -22,6 +22,9 @@ $( function() {
 
 window.onscroll = function() { show(); };
 
+/*..............................................................................
+                      Function to switch navbar's class
+..............................................................................*/
 function show() {
   var bodyElement = document.documentElement; //bodyElement for Mozilla
   var body = document.body; //body for Chrome
@@ -81,6 +84,10 @@ function show() {
 function addPhoto() {
   alert("Add your photo...");
 }
+
+/*..............................................................................
+                      Function to add card rows
+..............................................................................*/
 function addCard() {
   var div = document.getElementById('tab3');
   var initialRow = div.innerHTML;
@@ -90,6 +97,9 @@ function addCard() {
 
 }
 
+/*..............................................................................
+                      Function to filter tiles
+..............................................................................*/
 function showTiles( which ) {
 
   var all = '  <!-- Row 1 --><div class="row clearfix">'

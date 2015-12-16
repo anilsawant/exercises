@@ -26,10 +26,8 @@
 .container {
   background: transparent;
 }
-.vertical-gap-100 {
-  min-height: 100px;
-  z-index: 0;
-}
+
+/* features section styling */
 #features {
   background: rgba(0,0,0,.6);
   padding-top: 15px;
@@ -81,30 +79,6 @@ footer {
   opacity: 1.0;
 }
 
-
-
-#inputMessage {
-  margin-bottom: 15px;
-}
-#hero-element {
-  background: url(../../img/grass2.jpg) center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  margin-bottom: 15px;
-  min-height: 500px;
-  padding-bottom: 100px ;
-  padding-top: 60px;
-  position: relative;
-}
-
-#hero-element2 {
-  background: url(../../img/stadium.jpg) center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 800px;
-  position: relative;
-  margin-bottom: 15px;
-}
 /* --------------------------------------
    Typography
    -------------------------------------- */
@@ -121,12 +95,6 @@ body {
 .well h1 {
   margin-top: 0;
 }
-
-#ding {
-  position: fixed;
-  bottom: 0;
-  color: white
-}
 ul.unstyled {
 	list-style: none;
 	padding: 0;
@@ -134,10 +102,6 @@ ul.unstyled {
 /* --------------------------------------
    Navbar
    -------------------------------------- */
-#searchInput {
-  width: 200px;
-}
-
 .navbar-brand {
   padding: 13px 15px;
 }
@@ -277,6 +241,11 @@ ul.unstyled {
   margin: 0 20px 20px 0;
 }
 
+
+/*............................................................................
+                          For tooltip
+.............................................................................*/
+
 [rel="tooltip"] {
   color: #428bca;
 }
@@ -284,15 +253,10 @@ ul.unstyled {
 [rel="tooltip"]:hover {
   cursor: pointer;
 }
-.part1 {
-  color: white;
-  font-family: clonewars;
-  font-size: 36px;
-}
-.part1 h1 {
-  font-family: headliner;
-  font-size: 64px;
-}
+
+/*.............................................................................
+                    hero Element's Header
+..............................................................................*/
 .hero-header {
   color: white;
   text-align: center;
@@ -306,18 +270,40 @@ ul.unstyled {
   max-width: 230px;
   max-height: 230px;
 }
-.part3 {
-  color: white;
-  font-family: trench;
-  font-size: 24px;
-  font-weight: bold;
+#hero-element {
+  background: url(../../img/grass2.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 15px;
+  min-height: 500px;
+  padding-bottom: 100px ;
+  padding-top: 60px;
+  position: relative;
 }
-#div1 {
+#hero-element2 {
+  background: url(../../img/stadium.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 800px;
+  position: relative;
+  margin-bottom: 15px;
+}
+main {
   font-family: quango;
   font-weight: lighter;
 }
-
-
+/*.......... Section styling ........................*/
+#hero-element2 section{
+  color: white;
+  text-align: center;
+}
+#hero-element2 section h1{
+  font-family: quango;
+}
+#hero-element2 section img {
+  margin-bottom: 20px;
+  opacity: .6;
+}
 /*.............................................................................
                     Modal Window
 ..............................................................................*/
@@ -357,7 +343,6 @@ ul.unstyled {
 #addPhoto {
   margin-left: -50px;
 }
-
 #addPhoto:hover {
   text-decoration: none;
   cursor: pointer;
@@ -365,6 +350,14 @@ ul.unstyled {
 #tab3 .form-group{
   margin-right: 5px;
 }
+
+/*.............................................................................
+                      Portfolio Styling
+..............................................................................*/
+#portfolio h1 {
+  font-family: clonewars;
+}
+
 .pagination {
   float: left;
 }
@@ -377,51 +370,42 @@ ul.unstyled {
 .tile {
   margin-bottom: 30px;
 }
-
 .tile img {
   width: 100%;
   height: 200px;
   box-shadow: 2px -1px 3px #444;
 }
-
 .tile a {
   text-decoration: none;
 }
-
 .tile h3 {
   color: #666;
   font-family: sans-serif;
   letter-spacing: 2px;
   margin-bottom: 0;
 }
-
 .tile h3:hover {
   color: #1abc9c;
   text-shadow: 0 0 1px #00ff99;
 }
-
 .tile ul {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
 }
-
 .tile li {
   color: #888;
   display: inline-block;
   margin-left: 0;
   text-shadow: 1px 0 1px #888;
 }
-
 .tile li::after {
   content: '/';
   padding: 0 10px;
 }
-
 .tile li:last-child::after {
   content: '';
 }
-
 .tile p {
   margin: 15px 0;
 }
@@ -460,6 +444,8 @@ ul.unstyled {
 #gototop:focus {
   outline: 0;
 }
+
+
 /* --------------------------------------
    Media Queries
    -------------------------------------- */
@@ -516,6 +502,9 @@ ul.unstyled {
   }
   #tab3 .form-horizontal {
     border-bottom: 1px solid #ddd;
+  }
+  #portfolio h1 {
+    text-align: center;
   }
   .tile {
     text-align: center;
